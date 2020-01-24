@@ -1,0 +1,14 @@
+version: '3'
+services:
+  mongo:
+    image: mongo:3.2.21-jessie
+  webserver:
+    build: .
+    container_name: compose-webserver
+    restart: always
+    depends_on:
+    - mongo
+    environment:
+    - "DATABASE_URL=mongodb://mongo/test1"
+    ports:
+    - 3000:3000

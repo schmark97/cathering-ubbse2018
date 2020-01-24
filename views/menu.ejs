@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body background ="https://images.pexels.com/photos/168452/pexels-photo-168452.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">   
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Foodies</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button></li>
+              
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/user/login">Login<span class="sr-only">(current)</span></a>
+                    </li>
+                  </ul>
+        </div>
+    </nav>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <div class="card-columns">
+    <% for(var i=0; i < items.length; i++) { %>
+        <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="https://previews.123rf.com/images/mkistryn/mkistryn1210/mkistryn121000031/16060044-text-food-written-on-white-background-letters-made-of-part-of-vegetables.jpg" alt="Card image cap">
+                <div class="card-body">
+                        <h2 class="card-title"><%= items[i].name %></h2>
+                        <h3 class="card-subtitle mb-2 text-muted">Price: <%= items[i].price %></h3>
+                        <p class="card-text"> Ingredients: <%= items[i].ingredients %></p>
+                        
+                </div>
+              </div>
+              <% } %>
+            </div>
+</body>
+</html>

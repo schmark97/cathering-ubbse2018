@@ -1,0 +1,33 @@
+sudo docker pull node:current-alpine
+sudo docker run -it node:current-alpine sh
+exit
+
+docker images
+docker ps -a
+docker rm infallible_hopper
+docker ps -a
+sudo docker run --rm -it node:current-alpine sh
+docker ps
+
+sudo docker build -t proba .
+sudo docker run --name probacontainer --rm -p 3000:3000 proba
+
+sudo docker login
+sudo docker build -t smam0173_catheringcompany .
+
+sudo docker tag smam0173_catheringcompany  schmark97/smam0173_catheringcompany
+sudo docker push schmark97/smam0173_catheringcompany
+
+
+
+sudo docker build -t registry.heroku.com/ubbse2018-smam0173-docker/web .
+sudo docker run -it --rm -p 3000:3000 registry.heroku.com/ubbse2018-heroku-smam0173/web
+sudo docker login registry.heroku.com -u "schmark97@gmail.com"
+sudo docker push registry.heroku.com/ubbse2018-smam0173-docker/web
+heroku login
+heroku container:release web --app ubbse2018-smam0173-docker
+curl https://ubbse2018-smam0173-docker.herokuapp.com/
+
+
+
+
